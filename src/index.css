@@ -153,3 +153,6 @@
     @apply font-sans;
   }
 }
+.leaflet-container {
+  z-index: 0 !important;
+}
