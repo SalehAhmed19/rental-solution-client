@@ -1,11 +1,5 @@
-import {
-  ArrowRight,
-  CheckCircle2,
-  Paintbrush,
-  Droplets,
-  Sparkles,
-} from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { ArrowRight, Paintbrush, Droplets, Sparkles } from "lucide-react";
+import { Button } from "../../../../components/ui/button";
 
 export default function BespokeSection() {
   return (

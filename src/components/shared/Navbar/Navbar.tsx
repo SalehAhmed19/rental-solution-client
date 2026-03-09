@@ -1,30 +1,8 @@
-// import ProfileDropdown from "./ProfileDropdown";
-
-// export default function Navbar() {
-//   const login = true;
-//   return (
-//     <nav className="p-7">
-//       <div className="flex items-center justify-between mx-auto max-w-7xl">
-//         <div>Logo</div>
-//         <ul className="flex items-center gap-5">
-//           <li>হোম</li>
-//           <li>বাসা খুঁজুন</li>
-//           <li>কিভাবে কাজ করে?</li>
-//         </ul>
-//         <ul className="flex items-center gap-5">
-//           <li>লগইন</li>
-//           <li>বিজ্ঞাপন দিন</li>
-//           {login && <ProfileDropdown />}
-//         </ul>
-//       </div>
-//     </nav>
-//   );
-// }
-
-import { Button } from "@/components/ui/button";
 // মডার্ন আইকনগুলো
 import { Building2, Bell, Menu, PlusCircle } from "lucide-react";
 import ProfileDropdown from "./ProfileDropdown";
+import { Button } from "../../ui/button";
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
   // লগইন স্টেট (পরে এটি Context API বা Redux থেকে আসবে)
@@ -50,15 +28,21 @@ export default function Navbar() {
             Center: Navigation Links (Desktop Only)
             ========================================= */}
         <ul className="items-center hidden gap-8 font-medium text-gray-600 md:flex">
-          <li className="hover:text-teal-600 transition-colors cursor-pointer relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-teal-600 hover:after:w-full after:transition-all after:duration-300">
-            হোম
-          </li>
-          <li className="hover:text-teal-600 transition-colors cursor-pointer relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-teal-600 hover:after:w-full after:transition-all after:duration-300">
-            বাসা খুঁজুন
-          </li>
-          <li className="hover:text-teal-600 transition-colors cursor-pointer relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-teal-600 hover:after:w-full after:transition-all after:duration-300">
-            কিভাবে কাজ করে?
-          </li>
+          <Link to={"/"}>
+            <li className="hover:text-teal-600 transition-colors cursor-pointer relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-teal-600 hover:after:w-full after:transition-all after:duration-300">
+              হোম
+            </li>
+          </Link>
+          <Link to={"/search"}>
+            <li className="hover:text-teal-600 transition-colors cursor-pointer relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-teal-600 hover:after:w-full after:transition-all after:duration-300">
+              বাসা খুঁজুন
+            </li>
+          </Link>
+          <Link to={"/how-it-works"}>
+            <li className="hover:text-teal-600 transition-colors cursor-pointer relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-teal-600 hover:after:w-full after:transition-all after:duration-300">
+              কিভাবে কাজ করে?
+            </li>
+          </Link>
         </ul>
 
         {/* =========================================
@@ -83,8 +67,10 @@ export default function Navbar() {
             /* যদি ইউজার লগইন করা থাকে */
             <>
               <Button className="bg-[#0a4a4e] hover:bg-[#073639] text-white rounded-full px-6 font-medium shadow-md shadow-teal-900/20 flex items-center gap-2">
-                <PlusCircle className="w-4 h-4" />
-                বিজ্ঞাপন দিন
+                <Link to={"/dashboard"} className="flex items-center gap-2">
+                  <PlusCircle className="w-4 h-4" />
+                  বিজ্ঞাপন দিন
+                </Link>
               </Button>
 
               {/* নোটিফিকেশন আইকন */}
