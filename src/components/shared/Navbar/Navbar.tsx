@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 export default function Navbar() {
   // লগইন স্টেট (পরে এটি Context API বা Redux থেকে আসবে)
-  const login = true;
+  const login = false;
 
   return (
     // Sticky Navbar with Glassmorphism
@@ -56,7 +56,7 @@ export default function Navbar() {
                 variant="ghost"
                 className="px-6 font-bold text-gray-600 rounded-full hover:text-teal-600 hover:bg-teal-50"
               >
-                লগইন
+                <Link to={"/authentication/login"}>লগইন</Link>
               </Button>
               <Button className="bg-[#0a4a4e] hover:bg-[#073639] text-white rounded-full px-6 font-medium shadow-md shadow-teal-900/20 flex items-center gap-2">
                 <Link to={"/post-ad"} className="flex items-center gap-2">
