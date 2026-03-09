@@ -59,15 +59,17 @@ export default function Navbar() {
                 লগইন
               </Button>
               <Button className="bg-[#0a4a4e] hover:bg-[#073639] text-white rounded-full px-6 font-medium shadow-md shadow-teal-900/20 flex items-center gap-2">
-                <PlusCircle className="w-4 h-4" />
-                বিজ্ঞাপন দিন
+                <Link to={"/post-ad"} className="flex items-center gap-2">
+                  <PlusCircle className="w-4 h-4" />
+                  বিজ্ঞাপন দিন
+                </Link>
               </Button>
             </>
           ) : (
             /* যদি ইউজার লগইন করা থাকে */
             <>
               <Button className="bg-[#0a4a4e] hover:bg-[#073639] text-white rounded-full px-6 font-medium shadow-md shadow-teal-900/20 flex items-center gap-2">
-                <Link to={"/dashboard"} className="flex items-center gap-2">
+                <Link to={"/post-ad"} className="flex items-center gap-2">
                   <PlusCircle className="w-4 h-4" />
                   বিজ্ঞাপন দিন
                 </Link>

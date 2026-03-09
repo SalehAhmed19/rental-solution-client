@@ -4,6 +4,7 @@ import Home from "../pages/Home/Home";
 import SearchHome from "../pages/SearchHome/SearchHome";
 import HowItWorks from "../pages/HowItWorks/HowItWorks";
 import PropertyDetails from "../pages/SearchHome/PropertyDetailsPage";
+import AdPost from "../pages/AdPost/AdPost";
 
 const router = createBrowserRouter([
   {
@@ -14,6 +15,7 @@ const router = createBrowserRouter([
       { path: "/search", element: <SearchHome /> },
       { path: "/search/:id", element: <PropertyDetails /> },
       { path: "/how-it-works", element: <HowItWorks /> },
+      { path: "/post-ad", element: <AdPost /> },
     ],
   },
 ]);
