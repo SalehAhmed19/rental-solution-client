@@ -5,11 +5,14 @@ import { RouterProvider } from "react-router-dom";
 import router from "./routes/router.tsx";
 import { Provider } from "react-redux";
 import { store } from "./redux/store";
+import AuthWrapper from "./components/auth/AuthWrapper.tsx";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <Provider store={store}>
-      <RouterProvider router={router} />
+      <AuthWrapper>
+        <RouterProvider router={router} />
+      </AuthWrapper>
     </Provider>
   </StrictMode>,
 );

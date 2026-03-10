@@ -369,7 +369,7 @@ export default function Signup() {
 
         // ২. ২ সেকেন্ড সময় দেওয়া যাতে ইউজার মেসেজটি দেখতে পায়, তারপর নেভিগেট করা
         setTimeout(() => {
-          navigate("/");
+          navigate("/authentication/login");
         }, 2500);
       }
     } catch (error: any) {
