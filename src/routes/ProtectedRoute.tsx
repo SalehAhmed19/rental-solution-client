@@ -17,7 +17,9 @@ const ProtectedRoute = ({ children }: { children: React.ReactNode }) => {
 
   if (!isAuthenticated) {
     // লগইন না থাকলে লগইন পেজে পাঠাবে এবং বর্তমান লোকেশন মনে রাখবে
-    return <Navigate to="/login" state={{ from: location }} replace />;
+    return (
+      <Navigate to="/authentication/login" state={{ from: location }} replace />
+    );
   }
 
   return <>{children}</>;

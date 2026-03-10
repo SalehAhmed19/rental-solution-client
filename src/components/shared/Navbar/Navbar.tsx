@@ -103,7 +103,15 @@
 //   );
 // }
 
-import { Building2, Bell, Menu, PlusCircle, LogIn } from "lucide-react";
+import {
+  Building2,
+  Bell,
+  Menu,
+  PlusCircle,
+  LogIn,
+  ShieldCheck,
+  ShieldAlert,
+} from "lucide-react";
 import ProfileDropdown from "./ProfileDropdown";
 import { Button } from "../../ui/button";
 import { Link } from "react-router-dom";
@@ -189,8 +197,26 @@ export default function Navbar() {
                   </button>
 
                   {/* ইউজার প্রোফাইল মেনু */}
-                  <div className="pl-2 border-l border-gray-200">
+                  {/* <div className="pl-2 border-l border-gray-200">
                     <ProfileDropdown user={user} />
+                  </div> */}
+                  <div className="pl-2 border-l border-gray-200 relative group">
+                    <ProfileDropdown user={user} />
+
+                    {/* স্টাইলিশ ভেরিফিকেশন ব্যাজ (ন্যাভবারে আইকনের পাশে ছোট করে) */}
+                    <div className="absolute -bottom-1 -right-1">
+                      {user?.isVerified ? (
+                        /* ভেরিফাইড হলে: সবুজ শিল্ড */
+                        <div className="bg-white rounded-full p-0.5 shadow-sm border border-green-100">
+                          <ShieldCheck className="w-3.5 h-3.5 text-green-500 fill-green-50" />
+                        </div>
+                      ) : (
+                        /* আনভেরিফাইড হলে: হলুদ সতর্কবার্তা */
+                        <div className="bg-white rounded-full p-0.5 shadow-sm border border-amber-100">
+                          <ShieldAlert className="w-3.5 h-3.5 text-amber-500 fill-amber-50 animate-pulse" />
+                        </div>
+                      )}
+                    </div>
                   </div>
                 </>
               )}
