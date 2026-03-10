@@ -20,6 +20,7 @@ import {
 } from "recharts";
 import { useAppSelector } from "@/redux/hooks";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 // ডামি ডাটা গ্রাফের জন্য
 const data = [
@@ -125,9 +126,11 @@ export default function DashboardHome() {
           </p>
         </div>
         {role === "landlord" && (
-          <Button className="bg-teal-600 hover:bg-teal-700 h-12 rounded-2xl px-6 gap-2 font-bold shadow-lg shadow-teal-600/20">
-            <Plus className="w-5 h-5" /> নতুন বিজ্ঞাপন দিন
-          </Button>
+          <Link to="/post-ad">
+            <Button className="bg-teal-600 hover:bg-teal-700 h-12 rounded-2xl px-6 gap-2 font-bold shadow-lg shadow-teal-600/20">
+              <Plus className="w-5 h-5" /> নতুন বিজ্ঞাপন দিন
+            </Button>
+          </Link>
         )}
       </div>
 
