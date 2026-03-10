@@ -1,6 +1,7 @@
 import { images } from "../../../../assets/assets";
 import { ArrowRight, CheckCircle2, Home, ShieldCheck, Zap } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 export default function AboutSection() {
   return (
@@ -112,12 +113,14 @@ export default function AboutSection() {
 
               {/* ফাইনাল অ্যাকশন */}
               <div className="pt-6">
-                <Button className="w-full bg-[#0a4a4e] hover:bg-black text-white h-20 rounded-[2rem] text-xl font-bold transition-all flex items-center justify-between px-10 group overflow-hidden">
-                  <span>বিস্তারিত জানুন</span>
-                  <div className="bg-white/20 p-3 rounded-full group-hover:bg-white group-hover:text-[#0a4a4e] transition-all">
-                    <ArrowRight className="w-6 h-6" />
-                  </div>
-                </Button>
+                <Link to="/our-vision">
+                  <Button className="w-full bg-[#0a4a4e] hover:bg-black text-white h-20 rounded-[2rem] text-xl font-bold transition-all flex items-center justify-between px-10 group overflow-hidden">
+                    <span>বিস্তারিত জানুন</span>
+                    <div className="bg-white/20 p-3 rounded-full group-hover:bg-white group-hover:text-[#0a4a4e] transition-all">
+                      <ArrowRight className="w-6 h-6" />
+                    </div>
+                  </Button>
+                </Link>
               </div>
             </div>
           </div>

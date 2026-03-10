@@ -7,6 +7,7 @@ import PropertyDetails from "../pages/SearchHome/PropertyDetailsPage";
 import AdPost from "../pages/AdPost/AdPost";
 import Login from "../pages/Authentication/Login/Login";
 import Signup from "../pages/Authentication/Signup/Signup";
+import VisionPage from "../pages/Vision/VisionPage";
 
 const router = createBrowserRouter([
   {
@@ -14,6 +15,7 @@ const router = createBrowserRouter([
     element: <MainLayout />,
     children: [
       { path: "/", element: <Home /> },
+      { path: "/our-vision", element: <VisionPage /> },
       { path: "/search", element: <SearchHome /> },
       { path: "/search/:id", element: <PropertyDetails /> },
       { path: "/how-it-works", element: <HowItWorks /> },

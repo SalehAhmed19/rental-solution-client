@@ -1,5 +1,6 @@
 import { ArrowRight, Paintbrush, Droplets, Sparkles } from "lucide-react";
 import { Button } from "../../../../components/ui/button";
+import { Link } from "react-router-dom";
 
 export default function BespokeSection() {
   return (
@@ -97,10 +98,12 @@ export default function BespokeSection() {
                 </div>
 
                 <div className="pt-6">
-                  <Button className="w-full md:w-auto bg-[#0a4a4e] hover:bg-black text-white h-20 rounded-[2rem] px-12 text-xl font-black transition-all group flex items-center justify-center gap-4 shadow-2xl shadow-teal-900/20">
-                    বাসাটি দেখে নিন
-                    <ArrowRight className="w-6 h-6 transition-transform duration-500 group-hover:translate-x-3" />
-                  </Button>
+                  <Link to="/search">
+                    <Button className="w-full md:w-auto bg-[#0a4a4e] hover:bg-black text-white h-20 rounded-[2rem] px-12 text-xl font-black transition-all group flex items-center justify-center gap-4 shadow-2xl shadow-teal-900/20">
+                      বাসাটি দেখে নিন
+                      <ArrowRight className="w-6 h-6 transition-transform duration-500 group-hover:translate-x-3" />
+                    </Button>
+                  </Link>
                 </div>
               </div>
             </div>

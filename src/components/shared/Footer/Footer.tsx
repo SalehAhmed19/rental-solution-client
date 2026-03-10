@@ -12,6 +12,7 @@ import {
   Sparkles,
 } from "lucide-react";
 import { Button } from "../../ui/button";
+import { Link } from "react-router-dom";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -48,12 +49,14 @@ export default function Footer() {
               </p>
             </div>
 
-            <Button className="bg-white text-[#0a4a4e] hover:bg-teal-50 h-20 px-12 rounded-[2rem] text-xl font-black shadow-2xl flex items-center gap-4 transition-all hover:-translate-y-2 active:scale-95 group/btn">
-              বিজ্ঞাপন দিন
-              <div className="bg-[#0a4a4e] p-2 rounded-full text-white transition-transform group-hover/btn:translate-x-2">
-                <ArrowRight className="w-5 h-5" />
-              </div>
-            </Button>
+            <Link to="/post-ad" className="w-full lg:w-auto">
+              <Button className="bg-white text-[#0a4a4e] hover:bg-teal-50 h-20 px-12 rounded-[2rem] text-xl font-black shadow-2xl flex items-center gap-4 transition-all hover:-translate-y-2 active:scale-95 group/btn">
+                বিজ্ঞাপন দিন
+                <div className="bg-[#0a4a4e] p-2 rounded-full text-white transition-transform group-hover/btn:translate-x-2">
+                  <ArrowRight className="w-5 h-5" />
+                </div>
+              </Button>
+            </Link>
           </div>
         </div>
 
