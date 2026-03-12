@@ -42,7 +42,7 @@ export default function MyAds() {
             আপনার আপলোড করা বাসাগুলোর বর্তমান অবস্থা এখান থেকে নিয়ন্ত্রণ করুন।
           </p>
         </div>
-        <Link to="/dashboard/landlord/add-property">
+        <Link to="/post-ad">
           <Button className="bg-[#051c1e] hover:bg-teal-700 h-14 rounded-2xl px-8 gap-2 font-black shadow-xl shadow-teal-900/20 text-white transition-all active:scale-95">
             <Plus className="w-5 h-5" /> নতুন বিজ্ঞাপন
           </Button>
