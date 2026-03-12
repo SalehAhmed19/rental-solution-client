@@ -72,7 +72,7 @@ export default function DashboardLayout() {
               <Home className="w-6 h-6 text-white" />
             </div>
             <span className="text-xl font-black text-gray-900 tracking-tight">
-              আবাস ড্যাশবোর্ড
+              নব ঠিকানা ড্যাশবোর্ড
             </span>
           </div>
 

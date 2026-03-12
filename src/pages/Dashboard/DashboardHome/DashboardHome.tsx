@@ -122,7 +122,7 @@ export default function DashboardHome() {
             <span className="text-teal-600">{user?.name?.split(" ")[0]}!</span>
           </h1>
           <p className="text-gray-500 font-medium mt-1">
-            আপনার আজকের আবাস ড্যাশবোর্ড সামারি এখানে।
+            আপনার আজকের নব ঠিকানা ড্যাশবোর্ড সামারি এখানে।
           </p>
         </div>
         {role === "landlord" && (

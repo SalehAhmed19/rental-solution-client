@@ -66,7 +66,7 @@ export default function HowItWorks() {
             <Sparkles className="w-4 h-4" /> সহজ ৪টি ধাপ
           </div>
           <h1 className="text-5xl md:text-7xl font-heading font-black text-gray-900 leading-tight mb-8">
-            আবাসে বাসা ভাড়া নেওয়া <br />
+            নব ঠিকানায় বাসা ভাড়া নেওয়া <br />
             <span className="text-teal-600 italic text-4xl md:text-6xl font-medium">
               এখন আরও নিরাপদ
             </span>

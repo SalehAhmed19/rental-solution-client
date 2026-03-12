@@ -13,6 +13,7 @@ import {
 } from "lucide-react";
 import { Button } from "../../ui/button";
 import { Link } from "react-router-dom";
+import { images } from "../../../assets/assets";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -68,14 +69,15 @@ export default function Footer() {
           <div className="space-y-8">
             <div className="flex items-center gap-3">
               <div className="flex items-center justify-center w-12 h-12 text-white shadow-lg bg-gradient-to-br from-teal-400 to-teal-600 rounded-2xl shadow-teal-500/20 rotate-3">
-                <Building2 className="w-7 h-7" />
+                {/* <Building2 className="w-7 h-7" /> */}
+                <img src={images.logo} alt="নব ঠিকানা" className="w-7 h-7" />
               </div>
               <span className="text-3xl font-black tracking-tight text-white font-heading">
-                আবাস<span className="text-teal-500">.</span>
+                নব ঠিকানা<span className="text-teal-500">.</span>
               </span>
             </div>
             <p className="text-base italic font-medium leading-relaxed opacity-60">
-              "ব্রোকারমুক্ত এবং সরাসরি বাসা ভাড়ার অভিজ্ঞতায় আমরাই বাংলাদেশের
+              "ব্রোকারমুক্ত এবং সরাসরি বাসা ভাড়ার অভিজ্ঞতায় আমরাই বাংলাদেশের
               প্রথম পছন্দ।"
             </p>
             <div className="flex gap-4">
@@ -173,7 +175,7 @@ export default function Footer() {
             ========================================= */}
         <div className="flex flex-col items-center justify-between gap-8 pt-12 md:flex-row">
           <div className="flex flex-col items-center gap-4 text-xs font-bold tracking-widest uppercase md:flex-row opacity-40">
-            <p>© {currentYear} আবাস রেন্টালস - সর্বস্বত্ব সংরক্ষিত</p>
+            <p>© {currentYear} নব ঠিকানা - সর্বস্বত্ব সংরক্ষিত</p>
             <span className="hidden md:block">|</span>
             <p>
               একটি{" "}
