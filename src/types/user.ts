@@ -4,24 +4,19 @@ export interface CloudinaryImage {
 }
 
 export interface User {
-  _id?: string; // MongoDB এর ডিফল্ট আইডি
-  id?: string; // ফ্রন্টএন্ডের সুবিধার জন্য
+  _id?: string;
   name: string;
   email: string;
+  avatar?: string; // 🔥 এটি নিশ্চিত করুন
   role: "tenant" | "landlord" | "admin";
   phone: string;
   isVerified: boolean;
   verificationStatus: "pending" | "approved" | "rejected" | "unsubmitted";
-
-  // NID ইমেজের জন্য স্ট্রাকচার
   nidImages?: {
     front: CloudinaryImage;
     back: CloudinaryImage;
   };
-
-  // 🔥 সেভ করা বাসাগুলোর আইডি ধরে রাখার জন্য
   savedProperties: string[];
-
   createdAt?: string;
   updatedAt?: string;
 }
