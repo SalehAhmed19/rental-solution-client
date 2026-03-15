@@ -4,6 +4,7 @@
 export interface PropertyAddress {
   area: string;
   fullAddress: string;
+  addressDetails?: string; // ঐচ্ছিক ফিল্ড
 }
 
 export interface PropertyLocation {
