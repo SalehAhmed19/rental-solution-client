@@ -3,9 +3,16 @@ import { createRoot } from "react-dom/client";
 import "./index.css";
 import { RouterProvider } from "react-router-dom";
 import router from "./routes/router.tsx";
+import { Provider } from "react-redux";
+import { store } from "./redux/store";
+import AuthWrapper from "./components/auth/AuthWrapper.tsx";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <Provider store={store}>
+      <AuthWrapper>
+        <RouterProvider router={router} />
+      </AuthWrapper>
+    </Provider>
   </StrictMode>,
 );
